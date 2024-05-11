@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>products</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin&family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.cdnfonts.com/css/brittany-signature" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Open+Sans&family=Rubik&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <script src="typed.js"></script>
+    <style>
+        
+            body{
+                background:linear-gradient(
+                    100deg,
+                    #111111,
+                    #37302a,
+                    #090909,
+                    #000000
+                );
+                color: #FFFFFF;
+                background-size: 400% 400%;
+                animation-name: ma;
+                animation-duration: 10s;
+                animation-iteration-count: infinite;
+            }
+            @keyframes ma{
+                0%{
+                    background-position: 0% 50%;
+                }
+                50%{
+                    background-position:100% 50%;
+                }
+                100%{
+                     background-position: 0% 50%;
+                }
+            }
+            hr{
+                color: #FFFFFF;
+                width:0%;
+                margin-top: 50px;
+                margin-bottom: 50px;
+                text-align: center;
+            }
+            html{
+                scroll-behavior: smooth;
+            }
+                .typed-cursor{display: none;}
+            a{text-decoration: none;}
+            a:hover{text-decoration: underline ;}
+        
+        p{
+            font-family: "Barlow Condensed";
+        }
+    /*-------------------------------------------lap--------------------------------------------*/
+    .divbar{
+        width: 99.6%;   
+        position: fixed;
+        top: 0px;  
+        background: transparent;
+        backdrop-filter: blur(4px);
+        background-color: #222022;
+        left:0px;
+
+    }
+    .button1{
+        width: 2%;
+        display: inline-block;
+        vertical-align: top;
+        border: none;
+        margin-top: 2%;
+        margin-left: 3%;
+        background: none;
+        font-size: 50px;
+        color: #FF4C4C;
+        
+    }
+    .number1{
+        width: 7%;
+        margin-left: 7%;
+        vertical-align: top;
+        display: inline-block;
+    }
+    .our{
+        display: inline-block;
+        vertical-align: top;
+    
+        margin-top: 2%;
+        margin-left: 7%;
+        color:white;
+        font-size: 35px;
+        font-family: 'Barlow Condensed';
+        text-align: center;
+        text-decoration: none;
+    }
+    .our:hover{
+        cursor: pointer;
+        color: #FF4C4C;
+        text-decoration: underline;
+    }
+    
+    /*-----------------------------------------------------------------------------*/
+
+    
+    /*-----------------------------------------------------------------------------*/
+
+
+
+</style>
+    
+</head>
+<body>
+    
+    <!---------------------------------------------------------------------------------------------->
+    <div class="divbar">
+        <button id="but" class="button1">=</button>
+        <img class="number1" src="numberfirst.png" alt="">
+        
+        <a class="our" href="products.html">Products</a>
+        <a class="our" href="aboutus.html">About Us</a>
+        <a class="our" href="contuct.html">Contact Us</a>
+        <a href="index.html" class='our'>Home</a>
+        
+        
+         <!---------------------------------------------------------------------------------------------->
+ 
+          <!---------------------------------------------------------------------------------------------->
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<SCript>
+    
+    let width1 = window.innerWidth
+    console.log(width1);
+
+         let but = document.getElementById('but')
+
+         but.onclick = function but1(){
+ 
+         let nav = document.createElement('div')
+             nav.style.width= '0%'
+             nav.style.backgroundColor=' #222022'
+             nav.style.position='fixed'
+             nav.style.borderStyle='none'
+             nav.style.top='11.5%'
+             nav.style.marginLeft='0px'
+             nav.style.height = '800px'
+             nav.id = 'nav'
+             
+             
+             document.body.appendChild(nav)        
+             
+             let wid2=0
+ 
+             let mar = setInterval(() => {
+                 if(wid2>=0.25*width1){
+                     clearInterval(mar)
+                 }
+                 else{
+                     wid2=wid2+3
+                     nav.style.width=wid2+'px'
+                 }
+                 
+             }, 1);
+ 
+             let text = ['DISTRIBUTOR LOGIN','Product','About Us','Contact Us','Blog','News','E-Catalogue','Find Us',]
+             text.forEach(i => {
+                 let a = document.createElement('a')
+                 a.style.fontSize = '30px'
+                 a.style.color = 'white'
+                 a.style.display = 'block'
+                 a.style.marginLeft = '15%'
+                 a.style.marginTop = '30px'
+                 a.style.fontFamily='Barlow Condensed'
+                 a.style.textDecoration='none'
+                 a.innerText = i
+                 a.className='list'
+                 
+                 if(i == 'DISTRIBUTOR LOGIN'){a.href =''}
+                 if(i== 'Product'){a.href=''}
+                 if(i == 'About Us'){a.href =''}
+                 if(i==  'Contact Us'){a.href=''}
+                 
+                 if(i == 'Blog'){a.href = ''}
+                 if(i== 'News'){a.href=''}
+                 if(i == 'E-Catalogue'){a.href =''}
+                 if(i==  'Find Us'){a.href=''}
+                 nav.appendChild(a)
+             })
+ 
+         but.innerText = 'x'
+ 
+ 
+      but.onclick=function(){
+             nav.innerText = ''
+             let mar =  setInterval(() => {
+                         if(wid2<=0){
+                             clearInterval(mar)
+                             nav.innerText=''
+                             document.body.removeChild(nav)
+                             
+                         }
+                         else{
+                             wid2 = wid2 -3
+                             nav.style.width=wid2+'px'
+                         }
+                     
+                 }, 1);
+                 but.innerText='='
+                 
+             but.onclick= function(){
+                 but1()
+                 
+             }
+ 
+             }
+         }
+
+
+
+
+         let title = []
+        let price = []
+
+        function cart1() {
+            let cart = document.getElementById('cart')
+            if ( cart == null ) {
+                cart = document.createElement('div');
+                console.log(100);
+            }
+            else{
+                document.body.removeChild(cart)
+                cart = document.createElement('div');
+            }
+            
+    
+        
+            cart.id  = 'cart'
+            cart.style.backgroundColor = ' #6DCD9A';
+	        cart.style.width = '15%';
+	        cart.style.position = 'fixed';
+	        cart.style.top = '40px';
+            cart.style.right = '0%'
+	        let wid = 0
+            let mar = setInterval(function() {
+                if (wid >= 0.01*width1) {
+                    clearInterval(mar)
+                }
+                else{
+                    wid = wid + 1
+                    cart.style.right = wid + 'px'
+                }
+            }, 3);
+            document.body.appendChild(cart)
+
+            let remove = document.createElement('button');
+            remove.innerText = 'x'
+            remove.style.fontSize = '28px'
+            remove.style.fontFamily = 'Cabin'
+            remove.style.color = '#0C2323'
+            remove.style.display = 'block'
+            remove.style.backgroundColor = 'white'
+            remove.style.marginLeft = '89%'
+            remove.style.borderColor = 'white'
+            remove.style.boxShadow = '5px'
+
+            remove.onclick = function () {
+                let mar =  setInterval(function() {
+                        if (wid == 0) {
+                            clearInterval(mar);
+                            document.body.removeChild(cart);          
+                        }
+                        else{
+                            wid = wid - 1
+                            cart.style.width = wid +'px'
+                        }        
+                    }, 1);   
+            }
+            
+            cart.appendChild(remove);
+
+           
+                
+            
+
+            title.forEach((i,j) => {
+                let pr = price[j]
+                let p = document.createElement('p')
+                p.innerText = i 
+                p.style.fontSize = '20px'
+                p.style.fontFamily = 'Cabin'
+                p.style.color = '#0C2323'
+                p.style.marginLeft = '7%'
+                p.style.display = 'inline'
+                let hr = document.createElement('hr')
+                hr.style.width = '80%'
+                hr.style.marginTop='5px'
+                hr.style.marginBottom = '5px'
+
+                let p1 = document.createElement('p')
+                p1.innerText = pr + '$'
+                
+                p1.style.fontSize = '20px'
+                p1.style.fontFamily = 'Cabin'
+                p1.style.color = '#0C2323'
+                p1.style.marginLeft = '5%'
+                p1.style.display = 'inline-block'
+                cart.appendChild(p)
+                cart.appendChild(p1) 
+                
+                
+                let x = document.createElement('button')
+                x.innerText = 'X'
+                
+                x.style.fontSize = '10px'
+                x.style.fontFamily = 'Cabin'
+                x.style.color = '#0C2323'
+                x.style.display = 'inline-block'
+                x.style.backgroundColor = 'white'
+                x.style.marginLeft = '7%'
+                x.style.borderColor = 'white'
+                x.onclick = function () {
+                        title.pop(i)
+                        price.pop(pr)
+                        cart.removeChild(p)
+                        cart.removeChild(p1)
+                         cart.removeChild(x)
+                    cart1()
+                }
+                cart.appendChild(x)
+                cart.appendChild(hr)
+            });
+
+            let sum = 0
+            price.forEach(i => {
+                sum = sum + i
+            });
+            let psum = document.createElement('p')
+            
+            psum.style.fontSize = '25px'
+            psum.style.fontFamily = 'Cabin'
+            psum.style.color = '#0C2323'
+            psum.style.marginLeft = '15%'
+            psum.style.textAlign = 'center'
+            psum.style.display = 'inline-block'
+            psum.innerText = 'Total: ' + sum + '$'
+            cart.appendChild(psum)
+
+        }
+        function add(title1,price1) {
+            title.push(title1)
+            price.push(price1)    
+            cart1()
+        }
+ 
+</script>
+
+
+
+
+
+    
+</body>
+</html>
