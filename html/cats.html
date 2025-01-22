@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category Page</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+        
+        .category {
+            width: 300px;
+            height: 200px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        
+        .category:hover {
+            transform: scale(1.05);
+        }
+        
+        .category-text {
+            padding: 20px;
+        }
+        
+        .category h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .category p {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.5;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="category" onclick="navigateToProducts('filters')">
+            <div class="category-text">
+                <h2>Filters</h2>
+                <p>Explore our collection of Fuel Filters and Oil Filters for heavy trucks</p>
+            </div>
+        </div>
+        <div class="category" onclick="navigateToProducts('pressure-sensors')">
+            <div class="category-text">
+                <h2>Pressure Sensors</h2>
+                <p>Explore our range of sensors for monitoring pressure in various truck systems</p>
+            </div>
+        </div>
+        
+        <div class="category" onclick="navigateToProducts('temperature-sensors')">
+            <div class="category-text">
+                <h2>Temperature Sensors</h2>
+                <p>Find sensors to accurately measure temperatures in your truck's critical systems</p>
+            </div>
+        </div>
+        
+        <div class="category" onclick="navigateToProducts('position-speed-sensors')">
+            <div class="category-text">
+                <h2>Position and Speed Sensors</h2>
+                <p>Discover our selection of sensors for tracking position and speed</p>
+            </div>
+        </div>
+        
+        <div class="category" onclick="navigateToProducts('specialty-sensors')">
+            <div class="category-text">
+                <h2>Specialty Sensors</h2>
+                <p>Specialized sensors for unique applications, including NOX and rail pressure sensors</p>
+            </div>
+        </div>
+        
+        <div class="category" onclick="navigateToProducts('mechanical-parts')">
+            <div class="category-text">
+                <h2>Mechanical Parts</h2>
+                <p>Browse through our mechanical parts, such as pulleys, expansion tanks, and more</p>
+            </div>
+        </div>
+        
+ 
+        
+    </div>
+
+    <script>
+        function navigateToProducts(category) {
+            window.location.href = '/products/' + category;
+        }
+    </script>
+</body>
+</html>
