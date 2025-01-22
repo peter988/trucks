@@ -1,32 +1,6 @@
 from django.shortcuts import render
 from .models import Product, Category
 # Create your views here.
-from .add_products import import_products_from_excel
-
-# Step 1: Find the "filters" category
-
-
-def assign_empty_photo_to_products():
-    try:
-        # Define the category filters
-        category_filters = ['filters']
-        
-        # Define the path to the default empty photo
-        default_photo_path = "empty_photo.jpg"  # Update with the correct path
-
-        for product in Product.objects.all():
-            # Check if the product's category is not in the filters
-            if product.category.name not in category_filters:
-                # Assign the empty photo
-                product.photo = default_photo_path
-                product.save()
-
-                print(f"Assigned empty photo to product '{product.title}'")
-
-        print("Successfully assigned empty photos to products!")
-
-    except Exception as e:
-        print(f"Error: {str(e)}")
         
         
 def filters(request):
