@@ -1758,31 +1758,36 @@ if(width1>=900){
                 
             }, 1);
 
-            let text = ['Product','About Us','Contact Us','E-Catalogue-Filters','E-Catalogue-Parts']
-
-            text.forEach(i => {
-                let a = document.createElement('a')
-                a.style.fontSize = '25px'
-                a.style.color = 'white'
-                a.style.display = 'block'
-                a.style.marginLeft = '25%'
-                a.style.marginTop = '50px'
-    
-                a.style.fontFamily='Barlow Condensed'
-    
-                a.style.textDecorationColor='  #FF4C4C'
-                a.innerText = i
-                a.className='list'
-                
-                
-                if(i== 'Product'){a.href='/categories'}
-                if(i == 'About Us'){a.href ='/about-us'}
-                if(i==  'Contact Us'){a.href='/contact-us'}
-                
-                if(i == 'E-Catalogue-Filters'){a.href ='/media/filters.pdf'}
-                if(i==  'E-Catalogue-Parts'){a.href='/media/parts.pdf'}
-                nav.appendChild(a)
-            })
+            let text = [
+            { name: 'Product', href: '/categories' },
+            { name: 'About Us', href: '/about-us' },
+            { name: 'Contact Us', href: '/contact-us' },
+            { name: 'E-Catalogue-Filters', href: '/media/Fuel & Oil Filters.pdf' },
+            { name: 'E-Catalogue-Air Filters', href: '/media/Air Filters.pdf' },
+            { name: 'E-Catalogue-Truck Parts', href: '/media/Sensors, Rods, etc.pdf' },
+            { name: 'E-Catalogue-Brake Shoes', href: '/media/Brake-shoes.pdf' }
+        ];
+        
+        text.forEach(item => {
+            let a = document.createElement('a');
+            a.style.fontSize = '25px';
+            a.style.color = 'white';
+            a.style.display = 'block';
+            a.style.marginLeft = '25%';
+            a.style.marginTop = '50px';
+            a.style.fontFamily = 'Barlow Condensed';
+            a.style.textDecorationColor = '#FF4C4C';
+            a.innerText = item.name;
+            a.className = 'list';
+            a.href = item.href;
+        
+            if (item.name.startsWith('E-Catalogue')) {
+                a.target = '_blank'; // Open catalogue links in a new tab
+            }
+        
+            nav.appendChild(a);
+        });
+        
 
         but.innerText = 'x'
 
@@ -1847,31 +1852,35 @@ if(width1<900 && width1 > 600){
                 
             }, 1);
 
-            let text = ['Product','About Us','Contact Us','E-Catalogue-Filters','E-Catalogue-Parts']
-            
-            text.forEach(i => {
-                let a = document.createElement('a')
-                a.style.fontSize = '35px'
-                a.style.color = 'white'
-                a.style.display = 'block'
-                a.style.marginLeft = '15%'
-                a.style.marginTop = '70px'
-                a.style.fontFamily='Barlow Condensed'
-                
+            let text = [
+            { name: 'Product', href: '/categories' },
+            { name: 'About Us', href: '/about-us' },
+            { name: 'Contact Us', href: '/contact-us' },
+            { name: 'E-Catalogue-Filters', href: '/media/Fuel & Oil Filters.pdf' },
+            { name: 'E-Catalogue-Air Filters', href: '/media/Air Filters.pdf' },
+            { name: 'E-Catalogue-Truck Parts', href: '/media/Sensors, Rods, etc.pdf' },
+            { name: 'E-Catalogue-Brake Shoes', href: '/media/Brake-shoes.pdf' }
+        ];
         
-                a.style.textDecorationColor='  #FF4C4C'
-                a.innerText = i
-                a.className='list'
-                
-                
-                if(i== 'Product'){a.href='/categories'}
-                if(i == 'About Us'){a.href ='/about-us'}
-                if(i==  'Contact Us'){a.href='/contact-us'}
-                
-                if(i == 'E-Catalogue-Filters'){a.href ='/media/filters.pdf'}
-                if(i==  'E-Catalogue-Parts'){a.href='/media/parts.pdf'}
-                nav.appendChild(a)
-            })
+        text.forEach(item => {
+            let a = document.createElement('a');
+            a.style.fontSize = '25px';
+            a.style.color = 'white';
+            a.style.display = 'block';
+            a.style.marginLeft = '25%';
+            a.style.marginTop = '50px';
+            a.style.fontFamily = 'Barlow Condensed';
+            a.style.textDecorationColor = '#FF4C4C';
+            a.innerText = item.name;
+            a.className = 'list';
+            a.href = item.href;
+        
+            if (item.name.startsWith('E-Catalogue')) {
+                a.target = '_blank'; // Open catalogue links in a new tab
+            }
+        
+            nav.appendChild(a);
+        });
 
         but.innerText = 'x'
 
@@ -1936,31 +1945,35 @@ if(width1<=600){
                 
             }, 1);
 
-            let text = ['Product','About Us','Contact Us','E-Catalogue-Filters','E-Catalogue-Parts']
-            text.forEach(i => {
-                let a = document.createElement('a')
-                a.style.fontSize = '30px'
-                a.style.color = 'white'
-                a.style.display = 'block'
-                a.style.marginLeft = '20%'
-                a.style.marginTop = '60px'
-                a.style.fontFamily='Barlow Condensed'
-                
-                
-                
-                a.style.textDecorationColor='  #FF4C4C'
-                a.innerText = i
-                a.className='list'
-                
-            
-                if(i== 'Product'){a.href='/categories'}
-                if(i == 'About Us'){a.href ='/about-us'}
-                if(i==  'Contact Us'){a.href='/contact-us'}
-                
-                if(i == 'E-Catalogue-Filters'){a.href ='/media/filters.pdf'}
-                if(i==  'E-Catalogue-Parts'){a.href='/media/parts.pdf'}
-                nav.appendChild(a)
-            })
+            let text = [
+            { name: 'Product', href: '/categories' },
+            { name: 'About Us', href: '/about-us' },
+            { name: 'Contact Us', href: '/contact-us' },
+            { name: 'E-Catalogue-Filters', href: '/media/Fuel & Oil Filters.pdf' },
+            { name: 'E-Catalogue-Air Filters', href: '/media/Air Filters.pdf' },
+            { name: 'E-Catalogue-Truck Parts', href: '/media/Sensors, Rods, etc.pdf' },
+            { name: 'E-Catalogue-Brake Shoes', href: '/media/Brake-shoes.pdf' }
+        ];
+        
+        text.forEach(item => {
+            let a = document.createElement('a');
+            a.style.fontSize = '25px';
+            a.style.color = 'white';
+            a.style.display = 'block';
+            a.style.marginLeft = '25%';
+            a.style.marginTop = '50px';
+            a.style.fontFamily = 'Barlow Condensed';
+            a.style.textDecorationColor = '#FF4C4C';
+            a.innerText = item.name;
+            a.className = 'list';
+            a.href = item.href;
+        
+            if (item.name.startsWith('E-Catalogue')) {
+                a.target = '_blank'; // Open catalogue links in a new tab
+            }
+        
+            nav.appendChild(a);
+        });
 
         but.innerText = 'x'
 
