@@ -26,6 +26,8 @@ from django.contrib.sitemaps import GenericSitemap
 from django.contrib.sitemaps.views import sitemap 
 from django.views.generic.detail import DetailView
 from producs.models import *
+from django.contrib.sitemaps import GenericSitemap  
+from django.contrib.sitemaps.views import sitemap 
 from django.shortcuts import get_object_or_404
 
 class ServiceDetailView(DetailView):
@@ -45,6 +47,12 @@ class ServiceDetailView(DetailView):
     def get_template_names(self):
         return [f'{self.object.name.replace(" ", "").lower().replace("-", "")}.html']
 
+info_dict = {
+    "queryset": Product.objects.all(),
+    "date_field": "updated_at",
+} 
+
+
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('filters/', views.filters, name='pickup_trucks'),
@@ -53,6 +61,11 @@ urlpatterns = [
     path('', views.main, name='main'),
     path('about-us/', views.aboutus, name='about_us'),
     path('contact-us/', views.contactus, name='contact_us'),
+    path(
+        "sitemap.xml",
+        sitemap,
+        {"sitemaps": {"recipes": GenericSitemap(info_dict)}},
+    ),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
